@@ -1,0 +1,19 @@
+<?php
+$this->setLayout("layout.phtml");
+?>
+
+<h1 style="display: inline-block;">
+    Current Credit: $<?php echo round($balance, 2); ?>
+</h1>
+
+<form action="/ents-credits/add" method="post">
+    <div style="text-align: center; margin: auto;">
+        <h1>Amount of credit to add</h1>
+        <span style="font-size: 1.3em;">$</span>
+        <input type="text" name="amount" value="<?php echo $amount ? $amount : 10; ?>" style="width: 40px;">
+        <span style="font-size: 1.3em;">.00</span>
+        <br>
+        <div style="color: red;"><?php echo $validationError; ?></div>
+        <input type="submit" value="Add Credit" style="margin-top: 15px;">
+    </div>
+</form>

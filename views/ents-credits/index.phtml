@@ -1,0 +1,10 @@
+<?php
+$this->setLayout("layout.phtml");
+?>
+
+<h1 style="display: inline-block;">
+    Current Credit: $<?php echo round($balance, 2); ?>
+</h1>
+<a href="/ents-credits/add" class="button" style="float: right;">Add Credits</a>
+
+<?php echo $grid->render(); ?>
